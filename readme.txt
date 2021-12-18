@@ -1,6 +1,8 @@
+# Introduction
 This is a helper class to perform feature engineering to datasets for linear models or neural networks. Unlike tree-based ones, those models need cumbersome feature engineering like scaling, missing value imputing and categorical feature encoding (tree-based models only require label encoding, which is quite simple). I wanted to let users save those cumbersome efforts and spend more time on valuable things like creating models. 
 
-Example:
+# Example
+```
 train = pd.read_csv('train.csv')
 test = pd.read_csv('test.csv')
 
@@ -20,3 +22,4 @@ lfe = LinearFeatureEngieering(
 lfe.fit(train)
 train = lfe.transform(train)
 test = lfe.transform(test)
+```
